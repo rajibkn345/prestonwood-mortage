@@ -1,38 +1,98 @@
 import React, { useState } from "react"
 import "./header.css"
-import { nav } from "../../data/Data"
-import { Link } from "react-router-dom"
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Fade from '@mui/material/Fade';
 
 const Header = () => {
-  const [navList, setNavList] = useState(false)
+  const [open, setOpen] = useState(false)
+  const handleClick = () => {
+    setOpen(!open)
+  };
+
+
 
   return (
     <>
       <header>
-        <div className='container flex'>
+        <div className='container flexHeader'>
           <div className='logo'>
-            <img src='./images/logo.png' alt='' />
+           <Button color="success">KerryG</Button>
           </div>
-          <div className='nav'>
-            <ul className={navList ? "small" : "flex"}>
-              {nav.map((list, index) => (
-                <li key={index}>
-                  <Link to={list.path}>{list.text}</Link>
-                </li>
-              ))}
-            </ul>
+          <div className='nav flexGrow'>
+          <Button
+          sx={{textTransform:'capitalize',color:"#555"}}
+          size='large' 
+          >
+           Home
+          </Button>
+          <Button
+          sx={{textTransform:'capitalize',color:"#555"}}
+          size='large'
+          >
+           Purhcase
+          </Button>
+          <Button
+          sx={{textTransform:'capitalize',color:"#555"}}
+          size='large'
+          >
+           Refinance
+          </Button>
+          <Button
+          sx={{textTransform:'capitalize',color:"#555"}}
+          size='large'
+          >
+           Apply Now
+          </Button>
+
+          <Button
+          className="dropDownMenu"
+          sx={{textTransform:'capitalize',color:"#555"}}
+          size='large'
+           id="fade-button"
+           aria-controls={open ? 'fade-menu' : undefined}
+           aria-haspopup="true"
+           aria-expanded={open ? 'true' : undefined}
+           onClick={handleClick}
+           
+          >
+           Resources
+          </Button>
+             <Menu
+             sx={{position:'absolute'}}
+              className="menuitems"
+               id="fade-menu"
+               MenuListProps={{
+                 'aria-labelledby': 'fade-button',
+               }}
+               open={open}
+               TransitionComponent={Fade}
+             >
+               <MenuItem>Blog Page</MenuItem>
+               <MenuItem>Policy</MenuItem>
+               <MenuItem>Site Map</MenuItem>
+               <MenuItem>FAQ</MenuItem>
+               <MenuItem>Legal</MenuItem>
+               <MenuItem>Accessibility Statement</MenuItem>
+             </Menu>
+             <Button
+          sx={{textTransform:'capitalize',color:"#555"}}
+          size='large' 
+          >
+           About Us
+          </Button>
+          <Button
+          sx={{textTransform:'capitalize',color:"#555"}}
+           size='large'
+          >
+           Contact Us
+          </Button>
+
           </div>
-          <div className='button flex'>
-            <h4>
-              <span>2</span> My List
-            </h4>
-            <button className='btn1'>
-              <i className='fa fa-sign-out'></i> Sign In
-            </button>
-          </div>
+          <Button sx={{textTransform:'capitalize'}} variant="contained" color="success">Calculator</Button>
 
           <div className='toggle'>
-            <button onClick={() => setNavList(!navList)}>{navList ? <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}</button>
           </div>
         </div>
       </header>

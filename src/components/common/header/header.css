@@ -1,6 +1,6 @@
 header {
   background-color: #fff;
-  height: 10vh;
+  height: 65px;
   box-shadow: 0 5px 30px rgb(0 22 84 / 10%);
   padding: 15px 0;
   position: sticky;
@@ -21,7 +21,6 @@ header a:hover {
 header span {
   width: auto;
   padding: 0px 6px;
-  background: #27ae60;
   border-radius: 50px;
   color: #ffffff;
   margin-right: 4px;
@@ -34,6 +33,24 @@ header h4 {
 header .toggle {
   display: none;
 }
+
+.flexHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexGrow{
+display: flex;
+align-items: center;
+}
+.dropdownMenu{
+position: relative;
+}
+.menuItems{
+
+}
+
 @media screen and (max-width: 768px) {
   header {
     padding: 0;
