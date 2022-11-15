@@ -6,11 +6,17 @@ import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 
 const Header = () => {
-  const [open, setOpen] = useState(false)
-  const handleClick = () => {
-    setOpen(!open)
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
   };
 
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  
 
 
   return (
@@ -63,18 +69,19 @@ const Header = () => {
              sx={{position:'absolute'}}
               className="menuitems"
                id="fade-menu"
+               anchorEl={anchorEl}
                MenuListProps={{
                  'aria-labelledby': 'fade-button',
                }}
                open={open}
                TransitionComponent={Fade}
              >
-               <MenuItem>Blog Page</MenuItem>
-               <MenuItem>Policy</MenuItem>
-               <MenuItem>Site Map</MenuItem>
-               <MenuItem>FAQ</MenuItem>
-               <MenuItem>Legal</MenuItem>
-               <MenuItem>Accessibility Statement</MenuItem>
+               <MenuItem onClick={handleClose}>Blog Page</MenuItem>
+               <MenuItem onClick={handleClose}>Policy</MenuItem>
+               <MenuItem onClick={handleClose}>Site Map</MenuItem>
+               <MenuItem onClick={handleClose}>FAQ</MenuItem>
+               <MenuItem onClick={handleClose}>Legal</MenuItem>
+               <MenuItem onClick={handleClose}>Accessibility Statement</MenuItem>
              </Menu>
              <Button
           sx={{textTransform:'capitalize',color:"#555"}}
