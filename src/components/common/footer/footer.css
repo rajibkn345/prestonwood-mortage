@@ -13,7 +13,7 @@ footer {
 }
 footer .container {
   display: grid;
-  grid-template-columns: 6fr 2fr 2fr 1fr;
+  grid-template-columns: repeat(4,1fr);
   grid-gap: 20px;
 }
 footer img {
@@ -23,7 +23,7 @@ footer h2 {
   font-weight: 500;
 }
 footer p {
-  color: grey;
+  color: #aaa;
   margin: 20px 0;
 }
 footer input {
@@ -41,7 +41,7 @@ footer ul {
 }
 footer ul li {
   display: block;
-  color: grey;
+  color: #aaa;
   margin-bottom: 20px;
 }
 .legal {
