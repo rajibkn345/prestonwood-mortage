@@ -11,13 +11,14 @@ const Hero = () => {
       <section className='hero'>
         <div className='flexLeft'>
           <div className="hero-item">
-          <div style={{position:'relative'}} className="hero-bgImg">
-            <img src={banner1} className='circleLeft'  alt="banner-1"/>
-            <img src={banner2} className={'circleRight'} style={{right:'0',width:'350px',position:'absolute',height:'auto'}} alt='banner-2'/>
+             <div style={{width:'100%',height:'100%',position:'relative'}} className="hero-bgImg">
+               <img src={banner1} className='circleLeft'  alt="banner-1"/>
+               <img src={banner2} className={'circleRight'} style={{right:'0',width:'350px',position:'absolute',height:'auto'}} alt='banner-2'/>
+             </div>
+             <h2 className="heroTitle">Find the right mortage for you!</h2>
+               
           </div>
-            <h2>Find the right mortage for you!</h2>
-          </div>
-          <div className="hero-item"><img src={heroRight} alt="img"/></div>
+          <div className="hero-item heroImgRight"></div>
           {/* <Heading title='Search Your Next Home ' subtitle='Find new & featured property located in your local city.' /> */}
           {/* <form className='flex'>
             <div className='box'>
