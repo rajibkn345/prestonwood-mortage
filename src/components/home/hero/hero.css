@@ -1,13 +1,14 @@
 .hero {
-  background-image: url("../../../../public/images/banner.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 90vh;
   width: 100%;
 }
-.hero .container {
-  padding-top: 15%;
+.hero .flexLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hero-item{
+  width: 50%;
+  height: 100vh;
 }
 .hero h1 {
   color: #fff;
@@ -61,5 +62,24 @@ form h4 {
   }
   form input {
     width: 100%;
+  }
+}
+.circleLeft{
+  width: 420px;
+  position: absolute;
+  height: auto;  
+  animation-name: animLeft;
+  animation-duration: 4s;
+}
+
+@keyframes animLeft {
+  0%{
+    top:0;
+  }
+  50%{
+    top:10%
+  }
+  100%{
+    top:30%;
   }
 }
