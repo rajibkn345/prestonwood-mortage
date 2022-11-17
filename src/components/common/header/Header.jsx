@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -54,7 +55,7 @@ const Header = () => {
 
           <Button
           className="dropDownMenu"
-          sx={{textTransform:'capitalize',color:"#555"}}
+          sx={{textTransform:'capitalize',color:"#555",display:'flex',alignItems:"center"}}
           size='large'
            id="fade-button"
            aria-controls={open ? 'fade-menu' : undefined}
@@ -62,8 +63,9 @@ const Header = () => {
            aria-expanded={open ? 'true' : undefined}
            onClick={handleClick}
            
+           
           >
-           Resources
+           Resources <span style={{display:'flex',alignItems:'center'}}><ArrowDropDownIcon sx={{color:'#777'}}/></span>
           </Button>
              <Menu
              sx={{position:'absolute'}}

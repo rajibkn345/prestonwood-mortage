@@ -1,5 +1,7 @@
 .hero {
   width: 100%;
+  background-color: #eee;
+  height: 950px;
 }
 .hero .flexLeft {
   display: flex;

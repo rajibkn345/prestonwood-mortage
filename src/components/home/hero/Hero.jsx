@@ -19,12 +19,12 @@ const Hero = () => {
                <img src={banner2} className={'circleRight'} style={{right:'0',width:'350px',position:'absolute',height:'auto'}} alt='banner-2'/>
              </div>
              <h2 className="heroTitle">Find the right mortage for you!</h2>
-            <div className="heroCalculator">
+            <div style={{backgroundColor:"#eee"}} className="heroCalculator">
               <span style={{padding:'10px 30px',fontSize:'20px',color:'#fff', backgroundColor:'green',marginLeft:"30px"}}>Calculators</span>
             <Box
               component="form"
               sx={{
-                '& .MuiTextField-root': { m: 1, width: '25ch' },
+                '& .MuiTextField-root': { m: 1, width: '25ch' },backgroundColor:"#eee"
               }}
               noValidate
               autoComplete="off"
