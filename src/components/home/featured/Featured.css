@@ -11,3 +11,8 @@
   height: 65px;
   margin: auto;
 }
+
+.card-img:hover{
+  transition: ease-in-out 0.4s;
+  transform: scale(1.05);
+}
