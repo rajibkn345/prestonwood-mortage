@@ -38,7 +38,7 @@ const Hero = () => {
     console.log('rem==',+remainPayment,'numMon===',+numberMonths,'interest===',+interest);
     const monthlyPay = monthlyMortage(+remainPayment,+numberMonths,+interest).toFixed(2)
     console.log('pay===',monthlyPay);
-    const finalAmount = (monthlyPay*numberMonths+downPayment).toFixed(2);
+    const finalAmount = (monthlyPay*numberMonths+(+downPayment)).toFixed(2);
     setPrincipleAmount(remainPayment);
     setMonthlyPayment(monthlyPay)
     setBalancePayable((monthlyPay*numberMonths).toFixed(2));
@@ -77,7 +77,7 @@ console.log(interest);
                <img src={banner2} className={'circleRight'} style={{right:'0',width:'350px',position:'absolute',height:'auto'}} alt='banner-2'/>
              </div>
              <h2 className="heroTitle">Find the right mortage for you!</h2>
-            <div style={{backgroundColor:"#eee",marginTop:'-60px'}} className="heroCalculator">
+            <div style={{backgroundColor:"#eee",marginTop:"-200px"}} className="heroCalculator">
               <span style={{padding:'10px 30px',fontSize:'20px',color:'#fff', backgroundColor:'green',marginLeft:"30px"}}>Calculators</span>
             <Box
               component="form"
@@ -98,7 +98,7 @@ console.log(interest);
             
             <Button size='large' sx={{mx:1,fontSize:'18px',textTransform:'capitalize'}} color='success' variant='contained' onClick={calculateMortage}>Calculate Mortage</Button>
             <Button size='large' sx={{mx:1,fontSize:'18px',textTransform:'capitalize',backgroundColor:'#1d2636'}} variant='contained'>Call Us: (800) 530-5457</Button>
-            <TableContainer sx={{width:'50ch',m:2}} component={Paper}>
+            {principleAmount && <TableContainer sx={{width:'50ch',m:2}} component={Paper}>
               <Table size="small" aria-label="a dense table">
                 <TableBody>
                   <TableRow>
@@ -123,7 +123,7 @@ console.log(interest);
                   </TableRow>
                 </TableBody>
               </Table>
-            </TableContainer>      
+            </TableContainer>}      
            </Box>
             </div>
           </div>

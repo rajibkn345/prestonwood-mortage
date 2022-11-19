@@ -1,4 +1,5 @@
 import React from "react"
+import About from "../about/About"
 import Awards from "./awards/Awards"
 import Featured from "./featured/Featured"
 import Hero from "./hero/Hero"
@@ -11,6 +12,8 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <About/>
+      <Featured />
       {/* <Featured />
       <Recent />
       <Awards />
