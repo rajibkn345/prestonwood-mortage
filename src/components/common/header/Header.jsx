@@ -78,7 +78,6 @@ const Header = () => {
                open={open}
                TransitionComponent={Fade}
              >
-               <MenuItem onClick={handleClose}>Blog Page</MenuItem>
                <MenuItem onClick={handleClose}>Policy</MenuItem>
                <MenuItem onClick={handleClose}>Site Map</MenuItem>
                <MenuItem onClick={handleClose}>FAQ</MenuItem>
@@ -96,6 +95,12 @@ const Header = () => {
            size='large'
           >
            Contact Us
+          </Button>
+          <Button
+          sx={{textTransform:'capitalize',color:"#555"}}
+           size='large'
+          >
+           Blog
           </Button>
 
           </div>

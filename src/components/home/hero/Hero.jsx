@@ -19,7 +19,7 @@ const Hero = () => {
                <img src={banner2} className={'circleRight'} style={{right:'0',width:'350px',position:'absolute',height:'auto'}} alt='banner-2'/>
              </div>
              <h2 className="heroTitle">Find the right mortage for you!</h2>
-            <div style={{backgroundColor:"#eee"}} className="heroCalculator">
+            <div style={{backgroundColor:"#eee",marginTop:'-60px'}} className="heroCalculator">
               <span style={{padding:'10px 30px',fontSize:'20px',color:'#fff', backgroundColor:'green',marginLeft:"30px"}}>Calculators</span>
             <Box
               component="form"
