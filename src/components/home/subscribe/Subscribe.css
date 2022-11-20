@@ -1,0 +1,29 @@
+.subscribe{
+
+    background-image: url('../../../../public/images/subscribe-bg.jpg');
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    padding: 100px;
+    margin: 20px;
+    color: #fff;
+}
+.searchInput{
+width: 500px;
+border-bottom-left-radius: 8px;
+border-top-left-radius: 8px ;
+padding: 20px 30px;
+font-size: 18px;
+background-color: #fff;
+color: #555;
+}
+.searchInput::placeholder{
+color: #aaa;}
+
+.searchBtn{
+padding: 20px 40px;
+font-size: 18px;
+background-color: green;
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+}

@@ -1,16 +1,17 @@
 .hero {
   width: 100%;
   background-color: #eee;
-  height: 1000px;
+  max-height: 1000px;
 }
 .hero .flexLeft {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: fit-content;
 }
 .hero-item{
   width: 50%;
-  height: 100vh;
+  height: 100%;
   position: relative;
 }
 .hero h1 {
@@ -75,17 +76,11 @@ form h4 {
   color: #334;
   padding:0 30px 0 80px ;
   position: absolute;
-  top: 20%;
+  top: 5%;
   display: block;
   margin: auto;
 }
-.heroImgRight{
-  height: 900px;
-  background-image: url('../../images/about.jpg');
-  background-position: center center;
-  background-size: cover;
 
-}
 .circleLeft{
   width: 420px;
   position: relative;
@@ -95,16 +90,16 @@ form h4 {
 
 @keyframes animLeft {
   0%{
-    top:5%;
+    top:0;
     left:0
   }
   50%{
-    top:15%;
+    top:10%;
     left:0;
   }
   100%{
     left:0;
-    top:5%;
+    top:0%;
   }
 }
 .circleRight{

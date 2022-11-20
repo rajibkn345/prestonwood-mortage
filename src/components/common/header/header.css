@@ -39,6 +39,8 @@ header .toggle {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  margin: auto;
 }
 .flexGrow{
 display: flex;
@@ -47,9 +49,7 @@ align-items: center;
 .dropdownMenu{
 position: relative;
 }
-.menuItems{
 
-}
 
 @media screen and (max-width: 768px) {
   header {
