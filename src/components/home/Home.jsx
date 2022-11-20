@@ -10,7 +10,7 @@ import Recent from "./recent/Recent";
 import Team from "./team/Team";
 import Loan from "./Loan/Loan";
 import Subscribe from "./subscribe/Subscribe";
-
+import Blog from "../blog/Blog"
 const Home = () => {
   return (
     <>
@@ -20,6 +20,7 @@ const Home = () => {
       <Buying />
       <Loan />
       <Subscribe />
+      {/* <Blog/> */}
       {/* <Featured />
       <Recent />
       <Awards />
